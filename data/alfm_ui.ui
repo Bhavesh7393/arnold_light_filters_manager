@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_layout</class>
+ <widget class="QWidget" name="main_layout">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="arnold_lfm_label">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>Arnold Light Filters Manager</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="grid_list_layout">
+     <item row="0" column="1">
+      <widget class="QLabel" name="available_label">
+       <property name="text">
+        <string>Available Light Filters</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QListWidget" name="active_list">
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="active_label">
+       <property name="text">
+        <string>Active Light Filters</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QListWidget" name="lights_list">
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lights_label">
+       <property name="text">
+        <string>Lights</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QListWidget" name="available_list">
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <layout class="QGridLayout" name="grid_light_filter_layout" columnstretch="1,5,1">
+       <item row="0" column="0">
+        <widget class="QLabel" name="light_filter_label">
+         <property name="text">
+          <string>Filter:</string>
+         </property>
+         <property name="buddy">
+          <cstring>light_filter_line</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="light_filter_line"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="light_filter_clear_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="1">
+      <layout class="QGridLayout" name="grid_available_filter_layout" columnstretch="1,5,1">
+       <item row="0" column="0">
+        <widget class="QLabel" name="available_filter_label">
+         <property name="text">
+          <string>Filter:</string>
+         </property>
+         <property name="buddy">
+          <cstring>available_filter_line</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="available_filter_line"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="available_filter_clear_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="2">
+      <layout class="QGridLayout" name="grid_active_filter_layout" columnstretch="1,5,1">
+       <item row="0" column="0">
+        <widget class="QLabel" name="active_filter_label">
+         <property name="text">
+          <string>Filter:</string>
+         </property>
+         <property name="buddy">
+          <cstring>active_filter_line</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="active_filter_clear_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="active_filter_line"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="grid_btn_layout" columnstretch="3,2,2,2">
+     <item row="0" column="3">
+      <widget class="QPushButton" name="disconnect_filter_btn">
+       <property name="text">
+        <string>Disconnect</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="refresh_btn">
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="attach_filter_btn">
+       <property name="text">
+        <string>Attach</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="remove_filter_btn">
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="grid_add_filter" columnstretch="3,4,2">
+     <item row="0" column="0">
+      <layout class="QFormLayout" name="form_add_filter">
+       <item row="0" column="0">
+        <widget class="QLabel" name="add_lifter_label">
+         <property name="text">
+          <string>Add Filter:</string>
+         </property>
+         <property name="buddy">
+          <cstring>filter_name_line</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="filters_list">
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>-1</number>
+         </property>
+         <property name="placeholderText">
+          <string>Select Filter</string>
+         </property>
+         <property name="frame">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="filter_name_line">
+       <property name="toolTip">
+        <string>prefix: LFM_</string>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="whatsThis">
+        <string/>
+       </property>
+       <property name="accessibleName">
+        <string/>
+       </property>
+       <property name="accessibleDescription">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Filter Name (Optional)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="add_btn">
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="author_info">
+     <item>
+      <widget class="QLabel" name="name_label">
+       <property name="text">
+        <string>Bhavesh Budhkar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="email_label">
+       <property name="text">
+        <string>bhaveshbudhkar@yahoo.com</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lights_list</tabstop>
+  <tabstop>available_list</tabstop>
+  <tabstop>active_list</tabstop>
+  <tabstop>light_filter_line</tabstop>
+  <tabstop>light_filter_clear_btn</tabstop>
+  <tabstop>available_filter_line</tabstop>
+  <tabstop>available_filter_clear_btn</tabstop>
+  <tabstop>active_filter_line</tabstop>
+  <tabstop>active_filter_clear_btn</tabstop>
+  <tabstop>refresh_btn</tabstop>
+  <tabstop>attach_filter_btn</tabstop>
+  <tabstop>remove_filter_btn</tabstop>
+  <tabstop>disconnect_filter_btn</tabstop>
+  <tabstop>filters_list</tabstop>
+  <tabstop>filter_name_line</tabstop>
+  <tabstop>add_btn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>available_list</sender>
+   <signal>pressed(QModelIndex)</signal>
+   <receiver>active_list</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>active_list</sender>
+   <signal>pressed(QModelIndex)</signal>
+   <receiver>available_list</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>459</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
