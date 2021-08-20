@@ -1,4 +1,4 @@
-# arnold_light_filters_manager
+# Arnold Light Filters Manager for Houdini
 
 Features:
 1. List out all the Lights from /obj context, including Subnets.
