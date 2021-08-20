@@ -1,17 +1,5 @@
 # arnold_light_filters_manager
 
-This file is linked with 5 files, which are located inside data folder.
-Python 3 files: alfm_functions_py3.py, alfm_logic_py3.py
-Python 2 files: alfm_functions_py2.py, alfm_logic_py2.py
-Qt Designer UI file: alfm_ui.ui
-
-Software Requirement:
-Houdini Python 2 or 3
-Arnold Python 2 or 3
-
-Tested on:
-Windows, Houdini 18.5 Python 2 and 3
-
 Features:
 1. List out all the Lights from /obj context, including Subnets.
 2. When you select Lights from the list, 3 sections will update and Light Types
